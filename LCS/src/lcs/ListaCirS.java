@@ -144,7 +144,7 @@ public class ListaCirS {
 
             //==============================================crecacion de nodos  nodos=================================
             int contador1 = 0;
-            while (aux != null) {
+            while (aux != null && contador1<tama) {
                 codigo = codigo + "RR" + contador1 + "[label=\"Dato: " + aux.getDato() + "\",color=\"burlywood\"];\n";
                 aux = aux.getSiguiente();
                 contador1++;
@@ -155,11 +155,11 @@ public class ListaCirS {
                 if (contador1 == 0) {
                     rank1 = rank1 + "RR" + contador1;
                 } else {
-                    rank1 = rank1 + "->" + "RR" + contador1 + "->RR0";
+                    rank1 = rank1 + "->" + "RR" + contador1;
                 }
                 contador1++;
             }
-            codigo = codigo + "{rank=same; " + rank1 + ";};\n";
+            codigo = codigo + "{rank=same; " + rank1 + "->RR0"+ ";};\n";
             return codigo;
         } else {
             return codigo = "RR[label = \"Lista vacia\"   width = 1.5 style = filled,shape=box,style=filled,color=\"red\"]; \n";

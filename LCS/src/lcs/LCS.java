@@ -16,7 +16,7 @@ public class LCS {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        ListaCirS n=new ListaCirS();
+        ListaCirS n =new ListaCirS();
         n.InsertarUltimo(10);
         n.InsertarUltimo(8);
         n.InsertarUltimo(5);
