@@ -116,7 +116,7 @@ public class ListaCirS {
     public void GenerarGraphyz() {
         try {
             //escribir dot
-            FileWriter codigo = new FileWriter("listasimple" + ".dot");
+            FileWriter codigo = new FileWriter("listacircularS" + ".dot");
             PrintWriter documento = new PrintWriter(codigo);
             documento.println("digraph G {\n");
             documento.println("node[shape=box];\n");
@@ -128,12 +128,12 @@ public class ListaCirS {
 
             //compilar dot y generar imagen
             File miDir = new File(".");
-            String ruta = miDir.getCanonicalPath() + "/";//ruta actual
-            String salida = "dot -Tpng " + ruta + "listasimple" + ".dot -o " + ruta + "listasimple" + ".png";
+            String ruta = miDir.getCanonicalPath() + "\\";//ruta actual
+            String salida = "dot -Tpng " + ruta + "listacircularS" + ".dot -o " + ruta + "listacircularS" + ".png";
             Runtime rt = Runtime.getRuntime();
             rt.exec(salida);
             //abrir imagen
-            miDir = new File(ruta + "listasimple" + ".png");
+            miDir = new File(ruta + "listacircularS" + ".png");
             Desktop.getDesktop().open(miDir);
 
         } catch (IOException e) {
