@@ -80,10 +80,16 @@ public class ListaCirS {
                     aux2 = aux;
                     aux = aux.getSiguiente();
                 }
-                Nodo aux3 = aux.getSiguiente();
-                aux2.setSiguiente(aux3);
-                aux.setSiguiente(null);
-                tama--;
+                if (aux == ultimo) {
+                    ultimo = aux2;
+                    ultimo.setSiguiente(primero);
+                    tama--;
+                } else {
+                    Nodo aux3 = aux.getSiguiente();
+                    aux2.setSiguiente(aux3);
+                    aux.setSiguiente(null);
+                    tama--;
+                }
 
             }
         } else {
@@ -144,7 +150,7 @@ public class ListaCirS {
 
             //==============================================crecacion de nodos  nodos=================================
             int contador1 = 0;
-            while (aux != null && contador1<tama) {
+            while (aux != null && contador1 < tama) {
                 codigo = codigo + "RR" + contador1 + "[label=\"Dato: " + aux.getDato() + "\",color=\"burlywood\"];\n";
                 aux = aux.getSiguiente();
                 contador1++;
@@ -159,7 +165,7 @@ public class ListaCirS {
                 }
                 contador1++;
             }
-            codigo = codigo + "{rank=same; " + rank1 + "->RR0"+ ";};\n";
+            codigo = codigo + "{rank=same; " + rank1 + "->RR0" + ";};\n";
             return codigo;
         } else {
             return codigo = "RR[label = \"Lista vacia\"   width = 1.5 style = filled,shape=box,style=filled,color=\"red\"]; \n";

@@ -4,14 +4,14 @@ node[shape=box];
 
 		//generar circular simple 
 
-RR0[label="Dato: 10",color="burlywood"];
-RR1[label="Dato: 8",color="burlywood"];
-RR2[label="Dato: 5",color="burlywood"];
-RR3[label="Dato: 2",color="burlywood"];
-RR4[label="Dato: 20",color="burlywood"];
-RR5[label="Dato: 25",color="burlywood"];
-RR6[label="Dato: 26",color="burlywood"];
-RR7[label="Dato: 1",color="burlywood"];
+RR0[label="Dato: 8",color="burlywood"];
+RR1[label="Dato: 5",color="burlywood"];
+RR2[label="Dato: 2",color="burlywood"];
+RR3[label="Dato: 20",color="burlywood"];
+RR4[label="Dato: 25",color="burlywood"];
+RR5[label="Dato: 26",color="burlywood"];
+RR6[label="Dato: 1",color="burlywood"];
+RR7[label="Dato: 25",color="burlywood"];
 {rank=same; RR0->RR1->RR2->RR3->RR4->RR5->RR6->RR7->RR0;};
 
 }

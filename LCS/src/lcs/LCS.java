@@ -26,6 +26,9 @@ public class LCS {
         n.InsertarUltimo(26);
         n.InsertarUltimo(1);
         n.imprimir();
+        n.Eliminar(10);
+        n.InsertarUltimo(25);
+        n.imprimir();
         n.GenerarGraphyz();
     }
     
